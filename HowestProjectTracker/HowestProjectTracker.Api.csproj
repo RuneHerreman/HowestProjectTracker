@@ -14,6 +14,9 @@
     <ProjectReference Include="..\HowestProjectTracker.Domain\HowestProjectTracker.Domain.csproj" />
     <ProjectReference Include="..\HowestProjectTracker.Infrastructure\HowestProjectTracker.Infrastructure.csproj" />
     <ProjectReference Include="..\HowestProjectTracker.ServiceDefaults\HowestProjectTracker.ServiceDefaults.csproj" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+	<PackageReference Include="Scalar.AspNetCore" />
   </ItemGroup>
 
 </Project>
