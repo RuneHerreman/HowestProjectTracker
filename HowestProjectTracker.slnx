@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="HowestProjectTracker.AppHost/HowestProjectTracker.AppHost.csproj" />
+  <Project Path="HowestProjectTracker.Domain/HowestProjectTracker.Domain.csproj" Id="ad1ce218-f68b-4271-947b-3416ecf43fb6" />
+  <Project Path="HowestProjectTracker.Infrastructure/HowestProjectTracker.Infrastructure.csproj" Id="ada0fd41-61ef-4bae-b203-a3498d17dfc6" />
+  <Project Path="HowestProjectTracker.ServiceDefaults/HowestProjectTracker.ServiceDefaults.csproj" />
+  <Project Path="HowestProjectTracker/HowestProjectTracker.Api.csproj" />
+</Solution>
