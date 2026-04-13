@@ -39,19 +39,17 @@ builder.Services.AddOpenApi(options =>
 
 var app = builder.Build();
 
-app.MapScalarApiReference(options =>
-{
-    options.Title = "Howest Project Tracker API";
-    options.Theme = ScalarTheme.Purple;
-});
-
 app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.MapScalarApiReference(); // Exposeert Scalar UI op /scalar/v1 [7]
+    app.MapScalarApiReference(options =>
+    {
+        options.Title = "Howest Project Tracker API";
+        options.Theme = ScalarTheme.Purple;
+    });
 }
 
 app.UseHttpsRedirection();

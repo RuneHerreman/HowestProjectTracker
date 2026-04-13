@@ -8,6 +8,7 @@ namespace HowestProjectTracker.Domain.Repositories
     public interface IStudentRepository
     {
         Task<IEnumerable<Student>> GetStudentsAsync();
+        Task<IEnumerable<Student>> GetAllDetailedAsync();
         Task<Student?> GetByIdAsync(int id);
         Task AddAsync(Student student);
         Task DeleteAsync(int id);

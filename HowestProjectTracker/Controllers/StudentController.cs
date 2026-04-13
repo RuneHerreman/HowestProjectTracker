@@ -28,5 +28,16 @@ namespace HowestProjectTracker.Api.Controllers
                 return NotFound();
             return Ok(student.ToDetailDto());
         }
+
+        [HttpGet]
+        [Route("/all")]
+        [ProducesResponseType<IEnumerable<StudentDetailReadDto>>(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<StudentDetailReadDto>>> GetAllByIdAsync()
+        {
+            var student = await repository.GetAllDetailedAsync();
+            if (student is null)
+                return NotFound();
+            return Ok(student.ToStudentDetailReadDtos());
+        }
     }
 }

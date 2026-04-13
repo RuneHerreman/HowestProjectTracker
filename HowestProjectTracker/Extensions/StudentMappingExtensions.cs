@@ -19,6 +19,9 @@ namespace HowestProjectTracker.Api.Extensions
             );
         }
 
+        public static IEnumerable<StudentDetailReadDto> ToStudentDetailReadDtos(this IEnumerable<Student> students)
+            => students.Select(s => s.ToDetailDto());
+
         public static StudentDetailReadDto ToDetailDto(this Student s)
         {
             return new StudentDetailReadDto(
@@ -31,6 +34,8 @@ namespace HowestProjectTracker.Api.Extensions
                 )) // Map de geneste entiteiten naar DTO's [6, 8]
             );
         }
+
+        
     }
 
 }

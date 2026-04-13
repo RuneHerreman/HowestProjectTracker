@@ -28,6 +28,16 @@ namespace HowestProjectTracker.Infrastructure.Repositories
             }
         }
 
+        public async Task<IEnumerable<Student>> GetAllDetailedAsync()
+        {
+            return await context.Students
+                .Include(s => s.StudentsCourses)
+                    .ThenInclude(sc => sc.Course)
+                .AsNoTracking()
+                .OrderBy(s => s.LastName)
+                .ToListAsync();
+        }
+
         public async Task<Student?> GetByIdAsync(int id)
         {
             return await context.Students
